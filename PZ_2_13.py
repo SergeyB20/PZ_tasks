@@ -1,3 +1,12 @@
+def check(number):
+    try:
+        if type(int(number)) == int:
+            solve(number)
+    except ValueError:
+        print('Not number')
+        start()
+
+
 def solve(number):
     # check on minus
     if str(number)[0] == "-":
@@ -20,7 +29,7 @@ def solve(number):
 
 
 def start():
-    solve(input('Enter two-digit number:'))
+    check(input('Enter two-digit number:'))
 
 
 start()
